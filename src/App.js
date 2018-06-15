@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Counter from './counter.js'
 import TextReverese from './text.js'
+import EditList from './editList.js';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <Counter/>
         <TextReverese />
+        <EditList />
       </div>
     );
   }
