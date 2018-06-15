@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Counter from './counter.js'
+import TextReverese from './text.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Hej
+        <Counter/>
+        <TextReverese />
       </div>
     );
   }

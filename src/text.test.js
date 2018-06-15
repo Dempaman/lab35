@@ -65,5 +65,4 @@ describe('string Reverese', () => {
     inputString.simulate('change', { target: { value: 5 } })
     expect(wrapper.state('value')).toBe(25)
   })
-
 })

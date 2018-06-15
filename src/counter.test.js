@@ -18,8 +18,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import Counter from './counter.js'
 
-describe('Counter', () => {
-  it('#1 shallow smoke test <Counter /> ', () => {
+describe('value', () => {
+  it('#1 shallow smoke test <value /> ', () => {
     let wrapper = shallow(<Counter />);
   });
   it('#2 will increase button render', () => {
@@ -39,37 +39,36 @@ describe('Counter', () => {
   });
   it('#5 will state have value', () => {
     let wrapper = shallow(<Counter />);
-    expect( wrapper.state('counter') ).toBe(0);
+    expect( wrapper.state('value') ).toBe(0);
   });
-  it('#6 will increaseBtn add 1 to counter', () => {
+  it('#6 will increaseBtn add 1 to value', () => {
     let wrapper = shallow(<Counter />);
     const increaseBtn = wrapper.find('button').at(0);;
     increaseBtn.simulate('click')
-    expect(wrapper.state('counter')).toBe(1);
+    expect(wrapper.state('value')).toBe(1);
   })
-  it('#7 will decreaseBtn subtract 1 to counter', () => {
+  it('#7 will decreaseBtn subtract 1 to value', () => {
     let wrapper = shallow(<Counter />);
     const increaseBtn = wrapper.find('button').at(1);;
     increaseBtn.simulate('click')
-    expect(wrapper.state('counter')).toBe(-1);
+    expect(wrapper.state('value')).toBe(-1);
   })
   it('#8 set input to state', () => {
     let wrapper = shallow(<Counter />);
     const inputField = wrapper.find('input').at(0)
-    inputField.simulate('change', { target: { counter: 32 } })
-    expect(wrapper.state('counter')).toBe(32)
+    inputField.simulate('change', { target: { value: 32 } })
+    expect(wrapper.state('value')).toBe(32)
   })
   it('#9 convert string to number and set state', () => {
     let wrapper = shallow(<Counter />);
     const inputField = wrapper.find('input').at(0)
-    inputField.simulate('change', { target: { counter: '32' } })
-    expect(wrapper.state('counter')).toBe(32)
+    inputField.simulate('change', { target: { value: '32' } })
+    expect(wrapper.state('value')).toBe(32)
   })
   it('#10 if string in input is not a number, then keep sate ', () => {
     let wrapper = shallow(<Counter />);
     const inputField = wrapper.find('input').at(0)
-    inputField.simulate('change', { target: { counter: 'Hello' } })
-    expect(wrapper.state('counter')).toBe(0)
+    inputField.simulate('change', { target: { value: 'Hello' } })
+    expect(wrapper.state('value')).toBe(0)
   })
-
 })

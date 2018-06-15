@@ -4,29 +4,31 @@ class Counter extends Component{
   constructor(props){
     super(props);
     this.state = {
-      counter: 0,
+      value: 0,
     }
   }
   render(){
     return(
       <div>
-        <input className='inputText' type='text' counter={this.state.counter} onChange={this.handleChange} />
+        <input className='inputText' type='text' value={this.state.value} onChange={this.handleChange} />
         <button className='increaseBtn' onClick={this.handleIncrease}>increase</button>
         <button className='decreaseBtn' onClick={this.handleDecrease}>decrease</button>
+        <div>{this.state.value}</div>
       </div>
     )
   }
   handleChange = event => {
-    let toNumber = parseInt(event.target.counter)
-    if( !isNaN(toNumber) ){
-      return this.setState({ counter: toNumber });
+    let counter = event.target.value
+    if( !isNaN(counter ) && (typeof Number(counter)) === 'number'){
+      this.setState({ value: + counter });
     }
+
   }
   handleIncrease = event => {
-    this.setState({counter: this.state.counter +1})
+    this.setState({value: this.state.value +1})
   }
   handleDecrease = event => {
-    this.setState({counter: this.state.counter -1})
+    this.setState({value: this.state.value -1})
   }
 }
 

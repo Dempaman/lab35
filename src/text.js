@@ -10,7 +10,7 @@ class TextReverese extends Component {
   render(){
     return(
       <div>
-        <input className='inputText' type='text' type='text' value={this.state.value} onChange={this.handleChange} />
+        <input className='inputText' type='text' value={this.state.value} onChange={this.handleChange} />
         <p className='paraInput'>{this.state.value}</p>
       </div>
     )
