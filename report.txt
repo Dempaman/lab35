@@ -1,0 +1,53 @@
+Redigerbar Lista
+
+Har ni testat samma saker?
+Vi har testa ungefär samma saker förutom att vi har testa att JSX elementen renderas. Våra tester har gjorts på nästan varje element som finns med i kravspec för att vara helt säkra på att de renderas. 
+Den andra gruppen har inte kört något sådant test.
+
+Det vi inte har kontrollerat är att den renderar utan att “crasha”. Dock har vi gjort ett shallowtest på komponenten.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+Eftersom det är en väldigt liten komponent så blir det mesta viktiga testfall. Det viktigaste testfallen vore att se till att komponenten renderas med de JSX element som ska vara med i kravspec så att man 
+sedan kan gå vidare och testa funktionaliteten av komponenten.
+
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+Finner testet där de testar ifall listan renderar state korrekt lite onödigt då det ser ut som de kör mer eller mindre samma test nedanför fast att de simulerar det med ett input. Själva “expect” testar 
+exakt samma sak i båda testfallen. 
+De blandar test och it i sina testfall. Oklart om det är onödigt men blir rörigt att läsa.
+
+
+
+Counter
+Har ni testat samma saker?
+I denna komponenten så har vi testat samma saker. Deras testkod gör det den ska och testar funktionaliteten med att öka och sänka talet i state, samt om det är en sträng så ignorerar den värdet och 
+behåller tidigare värde i “state”.
+
+Vi har gjort några fler testfall och testat så att alla JSX element renderas ut rätt på hemsidan. Vi var lite mer noggrann med att se till att vi har fått med alla JSX element innan vi började testa 
+hur dom fungerar att interagera med.
+Det vi inte har kontrollerat är att den renderar utan att “crasha”. Dock har vi gjort ett shallowtest på komponenten.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+De viktigaste testfallen är att kunna öka, sänka och samt ändra värdet på state med hjälp av input.
+Själva syftet med uppgiften var att vi ska kunna trycka på 2st knappar som ökar eller sänker värdet i “state”.
+Samt att vi själva ska kunna skriva in ett tal som bestämmer vad “state” ska ha för värde och sedan därifrån kunna öka eller sänka värdet. Så att testa detta var de viktigaste testfallen för att 
+få ett resultat som fungerar.
+
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+I denna komponenten så hittade vi inte några onödiga testfall. Men det som vi hittade och som kan förbättras var att dom håller mer enhetliga tesfall där dom inte blandar “it” och “test”.
+
+
+
+Transformera test
+Har ni testat samma saker?
+Här har vi missat att testa om våran input omvandlas till versaler. Vi har med detta i våran funktion, men missade att testa detta fall.
+Vi har även här varit noga med att testa om våra JSX element renderas ut på hemsidan utan fel. Detta har Andreas och Erik missat och lagt sitt fokus på att testa funktionaliteten.
+Vi har testat om våran “state” renderas ut i paragraf-elementet. Detta har Andreas och Erik ej gjort. Vi testade även om “state” får ett värde av input-elementet. Detta missade Andreas och Erik.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+De viktigaste testfallen i denna komponent är när vi testar om våra strängar från input-fältet blir versaler och att orden skrivs ut baklänges.
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+Inga onödiga testfall vad vi kunde hitta. Dom har testat de som är relevant för uppgiften, men dom kunde kanske testat så att deras JSX-element renderas ut på hemsidan.
+
