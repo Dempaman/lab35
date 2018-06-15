@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*Alternativ 2: redigerbar lista
 Komponenten ska innehålla ett textfält där användaren kan skriva in en text. Där ska finnas en button,
 som man kan klicka på för att lägga till texten i en lista. Komponenten ska visa listan på något lämpligt sätt.
@@ -11,10 +9,6 @@ När listan renderas ska varje element i den förses med en button som kan anvä
 4. När listan renderas ska varje element i den förses med en button som kan användas för att ta bort elementet.
 */
 
-
-
-
->>>>>>> 40cc9d8501cf971dbbfac0e80f3741776a79a442
 import React from 'react';
 
 class EditList extends React.Component {
@@ -40,12 +34,10 @@ class EditList extends React.Component {
 
   addItem(){
     this.setState({ itemList: [...this.state.itemList, this.state.newItem] })
-    console.log(this.state.itemList)
   }
 
   handleChange(e){
     this.setState({newItem: e.target.value});
-    console.log(this.state.newItem)
   }
   render(){
     var self = this;
